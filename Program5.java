@@ -17,30 +17,19 @@
 
 import java.util.Scanner;
 
-public class Program5 {
+class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        String moveA = scanner.nextLine().trim().toLowerCase();
+        String st = sc.nextLine();
 
-        System.out.println("You entered: '" + moveA + "'");
-
-        String moveB = getWinningMove(moveA);
-        System.out.println(moveB);
-
-        scanner.close();
-    }
-
-    public static String getWinningMove(String moveA) {
-        switch (moveA) {
-            case "rock":
-                return "paper";
-            case "paper":
-                return "scissors";
-            case "scissors":
-                return "rock";
-            default:
-                return "Invalid Move";
+        if (st.equals("paper")) {
+            System.out.print("scissors");
+        } else if (st.equals("scissors")) {
+            System.out.print("rock");
+        } else {
+            System.out.print("paper");
         }
+        sc.close();
     }
 }
