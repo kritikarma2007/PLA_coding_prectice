@@ -11,7 +11,7 @@
 
 
 //  equlibrium indexof an array
-public class program12 {
+public class Program12 {
     public static int findEquilibriumIndex(int[] arr) {
         int totalSum = 0;
         for (int num : arr) {
